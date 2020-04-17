@@ -31,7 +31,9 @@ module.exports = {
         .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
         .limit(5)
         .offset((p-1)*5)
-        .select(['incidents.*',
+        .select(['incidents.title',
+                'incidents.description',
+                'incidents.value',
                 'ongs.nome',
                 'ongs.email', 
                 'ongs.whatsapp', 
